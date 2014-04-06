@@ -288,6 +288,35 @@ aside {
   float: right;
 }
 
+#formulario{
+  margin-right: 1em;
+  margin-top: 1em;
+  text-align: right;
+  display: none;
+}
+
+#formulario input{
+  border-radius: 5px;
+  margin: 0.5em 1em 1em 7em;
+  padding: 0.3em;
+
+}
+
+#formulario input[type="text"],
+#formulario input[type="url"]{
+  border: 1px solid #AAA;
+}
+
+#formulario input[type="submit"]{
+  background: #F4502A;
+  border: 0px;
+  border-radius: 0.3em;
+  box-shadow: rgba(0,0,0,0.2) 3px 3px 4px;
+  color: white;
+  font-style: italic;
+
+}
+
 @media screen and (min-width: 1000px){
   aside{
     display: block;
@@ -313,9 +342,12 @@ aside {
     margin-right: 2%;
   }
 
-
 }
 
-
+@media screen and (min-width: 550px){
+  #formulario input{
+    margin: 0.5em;
+  }
+}
 
 

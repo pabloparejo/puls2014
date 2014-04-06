@@ -10,6 +10,7 @@
     <meta charset="UTF-8"/>
     <meta name="description" content="Aqui se ponen las cosas que muestra google"/>
     <title>Puls2014 - Comunidad</title>
+
 </head>
 <body>
     <header>
@@ -33,9 +34,16 @@
             </li>
         </ul>
     </nav>
+
+    <form action="" id="formulario">
+        <input type="text" id="titulo" placeholder="Título" required>
+        <input type="url" placeholder="Link" id="link" required>
+        <input type="submit" value="Agregar">
+    </form>
+
     <aside>
         <video width="320" height="240" autoplay controls>
-            <source src="lecturas.mp4" type="video/mp4">
+            <source src="lecturas.m4v" type="video/mp4">
             <source src="lecturas.ogg" type="video/ogg">
                 <!-- Actualiza tu navegador, membrillo! -->
         </video>
@@ -149,5 +157,7 @@
         <p><strong>Powered by Pony</strong></p>    
         <p>mejorando.la 2014</p>
     </footer>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="code.js"></script>
 </body>
 </html>
