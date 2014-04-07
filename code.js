@@ -49,3 +49,32 @@ function addPost(e){
 
 $('#publicar_nav a').click(showHideForm)
 $formulario.on('submit', addPost)
+
+options = {
+    enableHighAccuracy: true,
+    timeout: 5000,
+    maximumAge: 0
+};
+
+function geo_exito(position){
+    var lat = position.coords.latitude;
+    var lon = position.coords.longitude;
+
+    var mapa = new Image();
+
+    mapa.src = "http://maps.googleapis.com/maps/api/staticmap?center="+lat+","+lon+"&zoom=13&size=200x200&sensor=false&maptype=hybrid"
+    $("#geo").hide();
+    $("#geo").append(mapa);
+
+    $("#geo").slideDown();
+
+    obtenerGeoInfo(lat, lon);
+}
+
+function geo_error(){
+    console.log("No sé ande andas soooosio!")
+}
+
+var geo = navigator.geolocation;
+geo.getCurrentPosition(geo_exito, geo_error, options);
+
